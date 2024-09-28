@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="/img/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,300;0,500;1,300;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Tela de Login</title>
+</head>
+<body>
+
+
+    <div class="container">
+        <form class="login-form" onsubmit="redirectToIndex(event)">
+            <h1> Entrar na Plataforma </h1>
+        
+            <div class="input-container">
+                <input placeholder="Email" type="email" required>
+                <img width="25" height="25" src="https://img.icons8.com/color/48/user.png" alt="user"/>
+            </div>
+
+            <div class="input-container">
+                <input placeholder="Senha" type="password" required> 
+                <img width="20" height="20" src="https://img.icons8.com/color/48/lock-2.png" alt="lock-2"/>
+
+                <a href="#">esqueci minha senha</a>
+            </div>
+
+            <button type="submit" class="submit-button">Entrar</button>
+
+            <div class="registro">
+               <p> Não está cadastrado?<a href="../TELA DE CADASTRO/cadastro.html" id="cadastrarLink">Cadastrar-se</a</p>
+            </div>
+
+            
+
+        </form>
+    </div>
+
+
+
+
+    <script>
+
+function validateForm(event) {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;  }
+
+            if (!email || !password) {
+                alert('Por favor, preencha o email e a senha.'); }
+
+
+
+
+
+
+        function redirectToIndex(event) {
+            event.preventDefault(); // Evita o envio do formulário
+            window.location.href = 'http://127.0.0.1:5500/TELA%20ECOOMERCE/Ecoomerce.html'; // URL da página index no mesmo repositório
+        }
+    </script>
+    
+</body>
+</html>
